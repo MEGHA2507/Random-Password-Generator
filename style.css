@@ -1,0 +1,52 @@
+body{
+    background-image: radial-gradient(rgb(124, 180, 253), rgb(77, 109, 253), rgb(28, 50, 241));
+}
+
+h1{
+    color: rgb(243, 243, 104);
+}
+
+h4{
+    color:whitesmoke;
+}
+.container{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-size: 3em;
+}
+
+.out{
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: rebeccapurple;
+}
+
+.myBtn{
+    padding: 20px 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.pass{
+    width: 300px;
+    float: left;
+    font-size: 30px;
+    color: white;
+    margin-left: 0;
+    padding: 20px;
+    background-color: coral;
+}
+
+.in{  
+    margin: 0;
+    padding: 5px;
+    float: right;
+    text-align: center;
+    background-color: rgb(245, 205, 94);
+    height: 80px;
+    color: maroon;
+    border-radius: 10px;
+    border: rgb(245, 205, 94);
+}

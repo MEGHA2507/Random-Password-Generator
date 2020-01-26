@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Random Password Generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        var keylist = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+        var tmp = ''
+        function generatepassword(plength){
+            tmp = ''
+            for(i=0;i<plength;i++){
+                tmp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
+            }
+            return tmp
+        }
+
+        function populateform(enterlength){
+            document.PasswordGenerator.output.value = generatepassword(enterlength)
+        }
+    </script>
+
+</head>
+  <body>
+      
+        <div class="container">
+            <form action="" name="PasswordGenerator">
+                <h1>Password Generator:</h1>
+                <h4>Generate Unpredictable passwords and get yourself save from the Hackers' World!!!! </h4>
+                <input type="text" size="18" name="output" class="out" disabled>
+                <input type="button" value="Generate Password" class="btn btn-success btn-block myBtn" onClick="populateform(this.form.length.value)"><br>
+                <div class="col-xs-10"><strong class="pass">Password Length:</strong>
+                  <div class="col-xs-2"><input type="text" name="length" size="3" value="6" class="in"></div><br><br>
+            </form>
+        </div>
+     
+      
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
